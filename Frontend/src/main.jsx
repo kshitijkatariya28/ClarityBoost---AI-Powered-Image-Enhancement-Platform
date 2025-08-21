@@ -9,6 +9,8 @@ import UploadForm from './components/UploadForm.jsx'
 import Upload from './pages/Upload.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
+import SignUp from './pages/SignUp.jsx'
+import Login from './pages/Login.jsx'
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -20,6 +22,8 @@ const route = createBrowserRouter(
             <Route path='upload' element={<Upload/>} />
             <Route path='about' element={<About/>} />
             <Route path='contact' element={<Contact/>}/>
+            <Route path='signup' element={<SignUp/>}/>
+            <Route path='login' element={<Login/>}/>
         </Route>
     )
 )

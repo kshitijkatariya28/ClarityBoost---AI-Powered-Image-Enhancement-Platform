@@ -1,8 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+   let navigate = useNavigate()
+
+   let handleLogin = ()=>{
+      navigate("/login")
+   }
+
+   let handleSignUp = ()=>{
+       navigate("/signup")
+   }
+
   return (
     <nav className="flex justify-between items-center bg-black text-white px-6 py-3">
       {/* Logo + Brand */}
@@ -37,10 +48,10 @@ const Navbar = () => {
 
       {/* Buttons */}
       <div className="flex gap-3">
-        <button className="bg-white text-black px-4 py-1 rounded-lg hover:bg-gray-200 transition-colors duration-200">
+        <button onClick={handleLogin} className="bg-white text-black px-4 py-1 rounded-lg hover:bg-gray-200 transition-colors duration-200">
           Login
         </button>
-        <button className="bg-pink-500 text-white px-4 py-1 rounded-lg hover:bg-pink-600 transition-colors duration-200">
+        <button  onClick={handleSignUp} className="bg-pink-500 text-white px-4 py-1 rounded-lg hover:bg-pink-600 transition-colors duration-200">
           Sign Up
         </button>
       </div>
